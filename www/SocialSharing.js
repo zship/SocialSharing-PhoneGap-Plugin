@@ -48,6 +48,10 @@ SocialSharing.prototype.shareViaFacebookWithPasteMessageHint = function (message
   cordova.exec(successCallback, this._getErrorCallback(errorCallback, "shareViaFacebookWithPasteMessageHint"), "SocialSharing", "shareViaFacebookWithPasteMessageHint", [message, null, this._asArray(fileOrFileArray), url, pasteMessageHint]);
 };
 
+SocialSharing.prototype.shareViaGplus = function (message, fileOrFileArray, url, successCallback, errorCallback) {
+  cordova.exec(successCallback, this._getErrorCallback(errorCallback, "shareViaGplus"), "SocialSharing", "shareViaGplus", [message, null, this._asArray(fileOrFileArray), url]);
+};
+
 SocialSharing.prototype.shareViaWhatsApp = function (message, fileOrFileArray, url, successCallback, errorCallback) {
   cordova.exec(successCallback, this._getErrorCallback(errorCallback, "shareViaWhatsApp"), "SocialSharing", "shareViaWhatsApp", [message, null, this._asArray(fileOrFileArray), url]);
 };
